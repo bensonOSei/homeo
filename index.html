@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codes</title>
+    <link rel="stylesheet" href="search.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#inputs").on("keyup", function(){
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function(){
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+
+    <h1>Search</h1>
+    <p>Type remedy</p>
+
+    <input type="text" id="inputs" placeholder="search">
+
+    <table >
+        <thead>
+        <tr>
+            <th>Remedy</th>
+            <th>Code</th>
+        </tr>
+        </thead>
+
+        <tbody id="myTable">
+        <tr>
+            <td>Arnica</td>
+            <td>23342</td>
+        </tr>
+        <tr>
+            <td>Insulin</td>
+            <td>29324</td>
+        </tr>
+        <tr>
+            <td>Ars Album</td>
+            <td>234256</td>
+        </tr>
+        <tr>
+            <td>Ferro Phos</td>
+            <td>98933</td>
+        </tr>
+        <tr>
+            <td>Apis Mel</td>
+            <td>646444</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.6.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.6.0/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    width: 50%;
+    background-color: #f1efef;
+    border: none;
+    padding: 5px;
+    margin-bottom: 10px;
+
+    &:hover, &:focus {
+        background-color: #d3d2d2;
+        outline: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+td:nth-child(2){
+    background-color: #f1efef;
+}
